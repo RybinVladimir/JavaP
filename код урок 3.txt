@@ -1,0 +1,50 @@
+
+import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Lesson3
+{
+	public static void main (String[]args)
+	{
+		JFrame frame = new JFrame();
+		frame.setTitle("Построй дорогу");
+		frame.setSize(600,600);
+	    frame.setLocationRelativeTo(null);
+	    
+	    Image image = Toolkit.getDefaultToolkit().createImage(Lesson3.class.getResource("icon29.png") );
+	    frame.setIconImage( image );
+
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLayout(new GridLayout (10,10));
+		
+		JButton[]buttons = new JButton[100];
+		
+		for (int i=0; i<buttons.length; i++)
+		{
+	    //buttons [i] = new JButton(String.valueOf(i+1));
+	    buttons [i] = new JButton();
+	    frame.add(buttons [i]);
+	    }
+ 		for (int i=0; i<10; i++)
+ 		{
+			int a = (int) (Math.random() * 99);
+			buttons[a].setIcon(load("bomb14.png"));		
+		}
+		for (int i=0; i<10; i++)
+		{
+			int a = (int) (Math.random() * 99);
+			buttons[a].setIcon(load("beg31.png"));
+		}
+        buttons[90].setIcon(load("start12.png"));
+        buttons[9].setIcon(load("finish12.png"));
+	    
+    	frame.setVisible(true);
+    	}
+	    public static ImageIcon load(String name){
+	    return new ImageIcon(Lesson3.class.getResource(name));
+	}
+}
