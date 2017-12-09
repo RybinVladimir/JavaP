@@ -1,0 +1,58 @@
+
+
+	{			
+				 Random rand = new Random();            
+		           for (int k=0; k <1; k++); 
+		                int k = rand.nextInt(98);
+		           System.out.println(k); 		           
+			 buttons [k] = new JButton(String.valueOf("ךכ‏ק"));
+
+
+       }
+
+
+
+
+
+
+
+public class Lesson4 {
+	public static void main (String[]args) {
+		JFrame frame = new JFrame();
+		frame.setTitle("המנמדא");
+		frame.setSize(600,600);
+		 frame.setLocationRelativeTo(null); 
+		frame.setIconImage(null);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLayout(new GridLayout (10,10));
+
+		
+		JButton[]buttons = new JButton[100];
+		for (int i=0; i<buttons.length; i++) {
+	         //buttons [i] = new JButton(String.valueOf(i+1));
+	         buttons [i] = new JButton();
+	        frame.add(buttons [i]);
+		}
+	
+
+		  
+		  
+		for (int i=0; i<10; i++) {
+			int a = (int) (Math.random() * 99);
+		buttons [a].setIcon(new ImageIcon("C:/Users/ÏÀÏÀ/Desktop/ןנמ/proekt/Sving4/images/Bomb14.png"));
+			
+		}
+		{
+			for (int i=0; i<10; i++) {
+				int a = (int) (Math.random() * 99);
+				buttons [a].setIcon(new ImageIcon("C:/Users/ÏÀÏÀ/Desktop/ןנמ/proekt/Sving4/images/33.png"));
+			
+		}
+
+	    	buttons [90].setIcon(new ImageIcon("C:/Users/ÏÀÏÀ/Desktop/ןנמ/proekt/Sving4/src/start12.png"));
+	    	buttons [9].setIcon(new ImageIcon("C:/Users/ÏÀÏÀ/Desktop/ןנמ/proekt/Sving4/src/finish12.png"));
+	    
+    		frame.setVisible(true);
+    	  }
+	}}
+
